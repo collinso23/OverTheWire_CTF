@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[a4paper,margin=1in]{geometry}
+
+
+\begin{document}
+\title{Final Project Write-Up}
+\author{Orion Collins}
+\maketitle
+
+\begin{abstract}
+    This write-up details the steps and challanges taken while attempting the overthewire.org challange Level .    
+\end{abstract}
+   
+\section{Level 0} 
+    \begin{itemize}
+    \item Browse to http://natas0.natas.labs.overthewire.org
+    \item Inspect Page source to find key in comments.
+    \item Natas1 key:gtVrDuiDfck831PqWsLEZy5gyDz1clto\\ \includegraphics{natas0/natas0_flag}
+    \end{itemize}
+
+
+\section{Level 1}
+    \begin{itemize}
+        \item Browse to http://natas1.natas.labs.overthewire.org
+        \item Right click has been blocked however hitting F12 will open dev tools which allow source to be inspected.
+        \item The key is located in comments section.
+        \item Natas2 key:ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi\\ \includegraphics{natas1/natas1_flag}
+    \end{itemize}
+   
+
+
+\section{Level 2}
+    \begin{itemize}
+        \item Browse to http://natas2.natas.labs.overthewire.org
+        \item Inspecting the source reveals a ref to /files/pixel1.png \\ \includegraphics{natas2/findfiles.JPG}
+        \item Browse to http://natas1.natas.labs.overthewire.org/files/ 
+        \item Click user.txt to open http://natas1.natas.labs.overthewire.org/files/user.txt \\ \includegraphics{natas2/userfile.JPG}
+        \item Natas3 key:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14\\ \includegraphics{natas2/natas2_flag}
+    \end{itemize}
+    
+    
+\section{Level 3}
+    \begin{itemize}
+        \item Browse to http://natas3.natas.labs.overthewire.org
+        \item Inspecting source reveals the comment "Not even Google will find it this time..."
+        \item Googling this phrase returns a reference https://support.google.com/webmasters/answer/6062608?hl=en
+        \item Browse to http://natas3.natas.labs.overthewire.org/robots.txt \\ \includegraphics{natas3/no_secrets.JPG}
+        \item Browse to http://natas3.natas.labs.overthewire.org/s3rc3t/. Here you see the user.txt file \\ \includegraphics{natas3/found_user.JPG}
+        \item Browse to http://natas3.natas.labs.overthewire.org/s3rc3t/user.txt. The Flag is displayed in cleartext \\ \includegraphics{natas3/natas3_flag.JPG}
+    \end{itemize}
+
+\end{document}
